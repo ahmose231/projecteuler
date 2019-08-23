@@ -1,0 +1,19 @@
+primes=[2,3,5]
+
+def isprime(x):
+	for i in primes:
+		if x%i==0:
+			return 0
+	for i in range(primes[-1],int(x/2),2):
+		if x%i==0:	
+			return 0
+	primes.append(i)
+	return 1
+	
+k=600851475143
+
+for i in range(3,int(k/2),2):
+	if isprime(i):
+		if k%i==0:
+			print(i)
+		
